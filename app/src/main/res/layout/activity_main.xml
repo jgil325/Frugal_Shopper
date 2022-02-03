@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Price" />
 
         <EditText
             android:id="@+id/editTextTextPersonName5"
@@ -50,7 +50,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (lbs)" />
 
         <EditText
             android:id="@+id/editTextTextPersonName6"
@@ -59,7 +59,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (oz)" />
 
     </LinearLayout>
 
@@ -87,7 +87,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Price" />
 
         <EditText
             android:id="@+id/editTextTextPersonName8"
@@ -96,7 +96,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (lbs)" />
 
         <EditText
             android:id="@+id/editTextTextPersonName9"
@@ -105,7 +105,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (oz)" />
     </LinearLayout>
 
     <LinearLayout
@@ -132,7 +132,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Price" />
 
         <EditText
             android:id="@+id/editTextTextPersonName11"
@@ -141,7 +141,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (lbs)" />
 
         <EditText
             android:id="@+id/editTextTextPersonName12"
@@ -150,7 +150,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Weight (oz)" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,19 +166,19 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:text="Compute"
+            android:text="Compare"
             android:textAllCaps="false"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/costBestProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:gravity="right"
             android:minEms="3"
-            android:text="A"
+            android:text="Best Purchase"
             android:textSize="24sp" />
     </LinearLayout>
 
