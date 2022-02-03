@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,9 +53,51 @@ public class MainActivity extends AppCompatActivity {
     private class ButtonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            double costA;
-            double costB;
-            double costC;
+            //Variables for all the inputs
+            double costA = 0.0;
+            double costB = 0.0;
+            double costC = 0.0;
+            double lbsA = 0.0;
+            double lbsB = 0.0;
+            double lbsC = 0.0;
+            double ozA = 0.0;
+            double ozB = 0.0;
+            double ozC = 0.0;
+
+            //Variables for calculated values to compare
+            double avgA = 0.0;
+            double avgB = 0.0;
+            double avgC = 0.0;
+
+            try {
+                costA = Double.parseDouble(priceA.getText().toString());
+                costB = Double.parseDouble(priceB.getText().toString());
+                costC = Double.parseDouble(priceC.getText().toString());
+
+                lbsA = Double.parseDouble(poundsA.getText().toString());
+                lbsB = Double.parseDouble(poundsB.getText().toString());
+                lbsC = Double.parseDouble(poundsC.getText().toString());
+
+                ozA = Double.parseDouble(ouncesA.getText().toString());
+                ozB = Double.parseDouble(ouncesB.getText().toString());
+                ozC = Double.parseDouble(ouncesC.getText().toString());
+            } catch ( NumberFormatException nfe ) {
+                // Toast is a short message displayed to the user
+                Toast toast = Toast.makeText( getApplicationContext(),
+                        "Enter positive decimal values",
+                        Toast.LENGTH_SHORT );
+                toast.show();
+            }
+
+            if(costA <= 0.0 || lbsA < 0 || ozA < 0 || costB <= 0.0 || lbsB < 0 || ozB < 0 || costC <= 0.0 || lbsC < 0 || ozC < 0) {
+                Toast toast = Toast.makeText( getApplicationContext(),
+                        "Enter positive decimal values",
+                        Toast.LENGTH_SHORT );
+                toast.show();
+                return;
+            }
+
+
 
         }
     }

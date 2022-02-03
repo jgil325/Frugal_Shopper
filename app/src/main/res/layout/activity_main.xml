@@ -170,16 +170,17 @@
             android:textAllCaps="false"
             android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/costBestProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:minEms="3"
-            android:text="Best Purchase"
-            android:textSize="24sp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/costBestProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:minEms="3"
+        android:text="Best Purchase"
+        android:textSize="24sp" />
 
 </LinearLayout>
