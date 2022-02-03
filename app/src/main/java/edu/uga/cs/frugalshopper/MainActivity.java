@@ -32,12 +32,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Find all the individual views
+        priceA = findViewById(R.id.priceA);
+        priceB = findViewById(R.id.priceB);
+        priceC = findViewById(R.id.priceC);
+        poundsA = findViewById(R.id.poundsA);
+        poundsB = findViewById(R.id.poundsB);
+        poundsC = findViewById(R.id.poundsC);
+        ouncesA = findViewById(R.id.ouncesA);
+        ouncesB = findViewById(R.id.ouncesB);
+        ouncesC = findViewById(R.id.ouncesC);
+
+        //Set button listener
         compare = findViewById( R.id.button );
         compare.setOnClickListener( new ButtonClickListener() );
     }
 
-    private class ButtonClickListener implements View.OnClickListener
-    {
+    //Button functions
+    private class ButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            double costA;
+            double costB;
+            double costC;
 
+        }
     }
 }

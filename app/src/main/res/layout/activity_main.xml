@@ -25,7 +25,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/A"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/priceA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
             android:text="Price" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/poundsA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,7 +53,7 @@
             android:text="Weight (lbs)" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/ouncesA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -81,7 +81,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/priceB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -90,7 +90,7 @@
             android:text="Price" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/poundsB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -99,7 +99,7 @@
             android:text="Weight (lbs)" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName9"
+            android:id="@+id/ouncesB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -126,7 +126,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName10"
+            android:id="@+id/priceC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -135,7 +135,7 @@
             android:text="Price" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName11"
+            android:id="@+id/poundsC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -144,7 +144,7 @@
             android:text="Weight (lbs)" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/ouncesC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
