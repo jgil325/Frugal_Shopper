@@ -26,13 +26,15 @@
 
         <TextView
             android:id="@+id/A"
-            android:layout_width="100dp"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:text="A"
-            android:textSize="24sp" />
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/priceA"
@@ -40,8 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Price" />
+            android:inputType="numberDecimal"
+            android:hint="Price" />
 
         <EditText
             android:id="@+id/poundsA"
@@ -49,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (lbs)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (lbs)" />
 
         <EditText
             android:id="@+id/ouncesA"
@@ -58,8 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (oz)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (oz)" />
 
     </LinearLayout>
 
@@ -72,13 +74,15 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="100dp"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:text="B"
-            android:textSize="24sp" />
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/priceB"
@@ -86,8 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Price" />
+            android:inputType="numberDecimal"
+            android:hint="Price" />
 
         <EditText
             android:id="@+id/poundsB"
@@ -95,8 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (lbs)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (lbs)" />
 
         <EditText
             android:id="@+id/ouncesB"
@@ -104,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (oz)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (oz)" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,13 +121,15 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="100dp"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:text="C"
-            android:textSize="24sp" />
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/priceC"
@@ -131,8 +137,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Price" />
+            android:inputType="numberDecimal"
+            android:hint="Price" />
 
         <EditText
             android:id="@+id/poundsC"
@@ -140,8 +146,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (lbs)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (lbs)" />
 
         <EditText
             android:id="@+id/ouncesC"
@@ -149,8 +155,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Weight (oz)" />
+            android:inputType="numberDecimal"
+            android:hint="Weight (oz)" />
     </LinearLayout>
 
     <LinearLayout
@@ -178,7 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:gravity="right"
+        android:gravity="left"
         android:minEms="3"
         android:text="Best Purchase"
         android:textSize="24sp" />
