@@ -14,15 +14,22 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String DEBUG_TAG = "FrugalShopper";
 
+    //Item A
     private EditText priceA;
     private EditText poundsA;
     private EditText ouncesA;
+
+    //Item B
     private EditText priceB;
     private EditText poundsB;
     private EditText ouncesB;
+
+    //Item C
     private EditText priceC;
     private EditText poundsC;
     private EditText ouncesC;
+
+    //Results
     private TextView costBestProduct;
     private Button compare;
 
@@ -47,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         //Set button listener
         compare = findViewById( R.id.button );
         compare.setOnClickListener( new ButtonClickListener() );
+
+        //Find final answer view
+        costBestProduct = findViewById(R.id.costBestProduct);
+
     }
 
     //Button functions
@@ -100,5 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    public double getPriceUnit(String price, String pounds, String ounces) {
+
     }
 }
