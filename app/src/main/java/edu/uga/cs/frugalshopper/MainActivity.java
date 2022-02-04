@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText poundsC;
     private EditText ouncesC;
 
+    //Unit Prices
+    private double unitPriceA, unitPriceB, unitPriceC;
+
     //Results
     private TextView costBestProduct;
     private Button compare;
@@ -64,56 +67,63 @@ public class MainActivity extends AppCompatActivity {
     private class ButtonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            //Variables for all the inputs
-            double costA = 0.0;
-            double costB = 0.0;
-            double costC = 0.0;
-            double lbsA = 0.0;
-            double lbsB = 0.0;
-            double lbsC = 0.0;
-            double ozA = 0.0;
-            double ozB = 0.0;
-            double ozC = 0.0;
-
-            //Variables for calculated values to compare
-            double avgA = 0.0;
-            double avgB = 0.0;
-            double avgC = 0.0;
-
-            try {
-                costA = Double.parseDouble(priceA.getText().toString());
-                costB = Double.parseDouble(priceB.getText().toString());
-                costC = Double.parseDouble(priceC.getText().toString());
-
-                lbsA = Double.parseDouble(poundsA.getText().toString());
-                lbsB = Double.parseDouble(poundsB.getText().toString());
-                lbsC = Double.parseDouble(poundsC.getText().toString());
-
-                ozA = Double.parseDouble(ouncesA.getText().toString());
-                ozB = Double.parseDouble(ouncesB.getText().toString());
-                ozC = Double.parseDouble(ouncesC.getText().toString());
-            } catch ( NumberFormatException nfe ) {
-                // Toast is a short message displayed to the user
-                Toast toast = Toast.makeText( getApplicationContext(),
-                        "Enter positive decimal values",
-                        Toast.LENGTH_SHORT );
-                toast.show();
-            }
-
-            if(costA <= 0.0 || lbsA < 0 || ozA < 0 || costB <= 0.0 || lbsB < 0 || ozB < 0 || costC <= 0.0 || lbsC < 0 || ozC < 0) {
-                Toast toast = Toast.makeText( getApplicationContext(),
-                        "Enter positive decimal values",
-                        Toast.LENGTH_SHORT );
-                toast.show();
-                return;
-            }
-
+            unitPriceA = getPricePerUnit(priceA.getText().toString(), poundsA.getText().toString(), ouncesA.getText().toString());
+            unitPriceB = getPricePerUnit(priceB.getText().toString(), poundsB.getText().toString(), ouncesB.getText().toString());
+            unitPriceC = getPricePerUnit(priceC.getText().toString(), poundsC.getText().toString(), ouncesC.getText().toString());
 
 
         }
     }
 
-    public double getPriceUnit(String price, String pounds, String ounces) {
+    public double getPricePerUnit(String price, String pounds, String ounces) {
+        double unitPrice = 0.0;
+        double calcPrice, calcPounds, calcOunces, totalOunces;
+        if(checkRowEmpty(price, pounds, ounces)) {
+            unitPrice = -1;
+        } else if(checkPriceEmpty(price)) {
+            Toast toast = Toast.makeText( getApplicationContext(),
+                    "A price must be entered or the row must be empty",
+                    Toast.LENGTH_SHORT );
+            toast.show();
+            return -1;
+        }
 
+        if(pounds.equals("")) {
+            calcPrice = Double.parseDouble(price);
+            calcOunces = Double.parseDouble(ounces);
+            totalOunces = calcOunces;
+            unitPrice = calcPrice / totalOunces;
+            return unitPrice;
+        }
+
+        if(ounces.equals("")) {
+            calcPrice = Double.parseDouble(price);
+            calcPounds = Double.parseDouble(pounds);
+            totalOunces = calcPounds * 16;
+            unitPrice = calcPrice / totalOunces;
+            return unitPrice;
+        }
+
+        calcPrice = Double.parseDouble(price);
+        calcPounds = Double.parseDouble(pounds);
+        calcOunces = Double.parseDouble(ounces);
+        totalOunces = (calcPounds * 16) + calcOunces;
+        unitPrice = calcPrice / totalOunces;
+        return unitPrice;
+
+    }
+
+    public boolean checkRowEmpty(String price, String pounds, String ounces) {
+        if(price.equals("") && pounds.equals("") && ounces.equals("")) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkPriceEmpty(String price) {
+        if(price.equals("") && !(pounds.equals("")) && !(ounces.equals(""))) {
+            return true;
+        }
+        return false;
     }
 }
