@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     poundsC.setText("0.0");
                     ouncesC.setText("0.0");
                 }
+                return;
             }
 
             //If none of the rows have any information
