@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 } if(unitPriceC == -2) {
                     priceC.setText("0.0");
                 }
+                return;
             }
 
             //If a row has price but nothing else
